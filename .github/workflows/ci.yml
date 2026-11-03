@@ -5,13 +5,13 @@ on:
   # Run CI when code is pushed to main or any feature branch
   push:
     branches:
-      - main
+      - master
       - feature/**
   
   # Run CI when a pull request is created or updated for main
   pull_request:
     branches:
-      - main
+      - master
 
 # A job is a group of steps. its internal key name is: build-test-publish
 # display name is Build, Test, and Publish which is visible to user
