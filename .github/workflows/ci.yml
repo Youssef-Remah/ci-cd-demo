@@ -35,15 +35,15 @@ jobs:
 
       # Step 3: Restore NuGet packages
       - name: Restore dependencies
-        run: dotnet restore StudentManagement.API.sln
+        run: dotnet restore StudentManagement.API.slnx
 
       # Step 4: Build the solution in Release mode
       - name: Build solution
-        run: dotnet build StudentManagement.API.sln --configuration Release --no-restore
+        run: dotnet build StudentManagement.API.slnx --configuration Release --no-restore
 
       # Step 5: Run unit tests
       - name: Run tests
-        run: dotnet test StudentManagement.API.sln --configuration Release --no-build --verbosity normal
+        run: dotnet test StudentManagement.API.slnx --configuration Release --no-build --verbosity normal
 
       # Step 6: Publish the API project
       - name: Publish Web API
