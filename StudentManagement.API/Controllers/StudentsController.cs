@@ -18,7 +18,7 @@ namespace StudentManagement.API.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var students = _studentService.GetAll();
+            var students = _studentService.GetAll()
             return Ok(students);
         }
 
