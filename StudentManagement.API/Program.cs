@@ -37,9 +37,4 @@ app.MapGet("/", async (context) =>
     await context.Response.WriteAsync("Version " + typeof(Program).Assembly.GetName().Version);
 });
 
-app.MapGet("/api/Health", async (context) => 
-{
-    await context.Response.WriteAsync("Student Management API is running successfully.");
-});
-
 app.Run();
