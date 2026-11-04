@@ -4,13 +4,13 @@ on:
   # Run CI when code is pushed to main or any feature branch
   push:
     branches:
-      - main
+      - master
       - feature/**
   
   # Run CI when a pull request is created or updated for main
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build-test-publish:
@@ -66,15 +66,15 @@ jobs:
 
       # Step 7: Restore NuGet packages
       - name: Restore dependencies
-        run: dotnet restore StudentManagement.API.sln
+        run: dotnet restore StudentManagement.API.slnx
 
       # Step 8: Build the solution in Release mode
       - name: Build solution
-        run: dotnet build StudentManagement.API.sln --configuration Release --no-restore
+        run: dotnet build StudentManagement.API.slnx --configuration Release --no-restore
 
       # Step 9: Run unit tests
       - name: Run tests
-        run: dotnet test StudentManagement.API.sln --configuration Release --no-build --verbosity normal
+        run: dotnet test StudentManagement.API.slnx --configuration Release --no-build --verbosity normal
 
       # Step 10: Publish the API project
       - name: Publish Web API
